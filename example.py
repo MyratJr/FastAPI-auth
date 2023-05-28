@@ -12,3 +12,7 @@ async def token(form_data:OAuth2PasswordRequestForm=Depends()):
 @app.get('/')
 async def index(token:str=Depends(oauth2_scheme)):
     return {'the_token':token}
+
+@app.get('/')
+async def index5(token:str=Depends(oauth2_scheme)):
+    return {'the_token':token}
